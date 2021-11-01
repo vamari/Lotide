@@ -8,13 +8,16 @@
 //   return true;
 // };
 
-// function assertEqual(arr1, arr2) {
-//   return arraysEqual(arr1, arr2)
+// // TEST CODE
+// //assertEqual("Lighthouse Labs", "Bootcamp");
+// //assertEqual(1, 1);
+
+
+// function assertEqual(param1, param2){
+//   if(param1 === param2) return true
+//   return false
 // }
-
-// const res = assertEqual([1,2,3], [1,2,3])
-// console.log(res)
-
+// TEST/ASSERTION FUNCTIONS
 
 const eqArrays = function(arr1, arr2) {
   if ( arr1.length !== arr2.length) {
@@ -30,12 +33,27 @@ const eqArrays = function(arr1, arr2) {
 
 
 const assertArraysEqual = function(actual, expected) {
-const result = eqArrays(actual, expected)
+  const result = eqArrays(actual, expected)
   if (result) {
       console.log(`Assertion Passed: ${actual} === ${expected}`);
   } else {
     console.log(`Assertion Failed: ${actual} !==  ${expected}`);
   }
 };
-assertArraysEqual([1,2,3], [1,2,3])
-assertArraysEqual([1,2,3], [1,3,4,5])
+
+// ACTUAL FUNCTION
+const middle = function(array) {
+  let index = Math.floor(array.length/2)
+  console.log("index:",index) 
+  let result = [array[index]];
+  let result1 = [array[index-1],array[index]] 
+ if ( array.length === 1 && array.length ===2) {
+   return [];
+ } else if (array.length %2 !==0){
+   return result;
+ }
+  return result1;
+  
+  }
+  const testArray = ["a","b","c","d"]
+  console.log(middle(testArray))
