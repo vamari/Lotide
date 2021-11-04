@@ -44,10 +44,10 @@ const assertArraysEqual = function(actual, expected) {
 // ACTUAL FUNCTION
 const middle = function(array) {
   let index = Math.floor(array.length/2)
-  console.log("index:",index) 
+  //console.log("index:",index) 
   let result = [array[index]];
   let result1 = [array[index-1],array[index]] 
- if ( array.length === 1 && array.length ===2) {
+ if ( array.length === 1 || array.length ===2) {
    return [];
  } else if (array.length %2 !==0){
    return result;
@@ -55,8 +55,9 @@ const middle = function(array) {
   return result1;
   
   }
-  // const testArray = ["a","b","c","d"]
-  // console.log(middle(testArray))
+  const testArray = ["a"]
+  console.log(middle(testArray))
+
 
 
   module.exports = middle;
