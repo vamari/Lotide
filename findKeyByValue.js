@@ -9,14 +9,14 @@ const assertEqual = function(actual, expected) {
 
 
 const findKeyByValue = function(object, value) {
-  const array = Object.keys(object);
-  //const val = Object.values(object);
+  const arrayOfKeys = Object.keys(object);
   
   
   
   
-  console.log(array);
-  for (let key of array) {
+  
+  console.log(arrayOfKeys);
+  for (let key of arrayOfKeys) {
 
     if (object[key] === value){
       return key;
