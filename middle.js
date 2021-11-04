@@ -55,5 +55,8 @@ const middle = function(array) {
   return result1;
   
   }
-  const testArray = ["a","b","c","d"]
-  console.log(middle(testArray))
+  // const testArray = ["a","b","c","d"]
+  // console.log(middle(testArray))
+
+
+  module.exports = middle;
